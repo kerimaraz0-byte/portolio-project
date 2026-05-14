@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #ff003c;
+}
+
+.site-header {
+    background: #000;
+    border-bottom: 1px solid rgba(255, 0, 60, 0.35);
+    box-shadow: 0 0 25px rgba(255, 0, 60, 0.25);
+}
+
+.navbar {
+    height: 80px;
+    padding: 0 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ff003c;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #ff003c, 0 0 20px #ff003c;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+ul a {
+    color: #ff003c;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff003c;
+}
+
+ul a:hover {
+    color: white;
+}
+
+#themeToggle {
+    padding: 12px 18px;
+    border: 1px solid #ff003c;
+    background: transparent;
+    color: #ff003c;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.7);
+}
+
+.hero {
+    min-height: 85vh;
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background:
+        radial-gradient(circle at right, rgba(255,0,60,0.18), transparent 35%),
+        #000;
+}
+
+.hero-text span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff003c;
+    text-shadow: 0 0 10px #ff003c;
+}
+
+.hero-text h1 {
+    font-size: 72px;
+    line-height: 1.1;
+    margin: 20px 0;
+    color: #ff003c;
+    text-shadow:
+        0 0 8px #ff003c,
+        0 0 20px #ff003c,
+        0 0 45px #ff003c;
+}
+
+.hero-text h3 {
+    font-size: 21px;
+    margin-bottom: 25px;
+    color: #ff003c;
+    text-shadow: 0 0 8px #ff003c;
+}
+
+.hero-text p {
+    max-width: 600px;
+    color: white;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 25px;
+}
+
+.btn {
+    padding: 15px 28px;
+    border: 1px solid #ff003c;
+    color: #ff003c;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 18px rgba(255, 0, 60, 0.8);
+}
+
+.btn:hover {
+    background: #ff003c;
+    color: #000;
+}
+
+.outline {
+    background: transparent;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ff003c;
+    box-shadow:
+        0 0 25px #ff003c,
+        0 0 70px rgba(255, 0, 60, 0.8);
+}
+
+.home-projects {
+    padding: 70px 8%;
+    border-top: 1px solid rgba(255,0,60,0.25);
+    background: #000;
+}
+
+.home-projects h2,
+section h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #ff003c;
+    text-shadow: 0 0 10px #ff003c, 0 0 25px #ff003c;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.card {
+    background: rgba(255, 0, 60, 0.06);
+    border: 1px solid #ff003c;
+    border-radius: 18px;
+    padding: 35px;
+    min-height: 220px;
+    box-shadow: 0 0 22px rgba(255, 0, 60, 0.45);
+}
+
+.card h2,
+.card h3 {
+    color: #ff003c;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #ff003c;
+}
+
+.card p {
+    color: white;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card strong {
+    color: #ff003c;
+}
+
+.contact-form {
+    max-width: 650px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 17px;
+    background: #050505;
+    border: 1px solid #ff003c;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 12px rgba(255, 0, 60, 0.4);
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    ul {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-image img {
+        width: 260px;
+        height: 260px;
+    }
+}
